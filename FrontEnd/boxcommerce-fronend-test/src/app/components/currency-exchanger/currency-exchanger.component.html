@@ -1,0 +1,13 @@
+<form class="currency-form">
+    <mat-form-field class="currency-input">
+      <input matInput placeholder="Amount" type="number">
+    </mat-form-field>
+    <mat-select class="currency-select" placeholder="Currency">
+        <mat-option *ngFor="let currency of currencyTypes" [value]="currency.value">
+        {{currency.viewValue}}
+     </mat-option>
+    </mat-select>
+    <button mat-icon-button type="button" class="convert-btn" (click)="triggerExchangeOnOther()">
+        <mat-icon aria-label="Convert">autorenew</mat-icon>
+    </button>
+</form>

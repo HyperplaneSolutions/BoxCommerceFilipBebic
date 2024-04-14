@@ -1,0 +1,35 @@
+.currency-form{
+    width: 300px;
+    display: inline-flex;
+    vertical-align: middle;
+    border: 3px solid blue;
+    border-radius: 15px;
+    padding: 5px;
+        padding-top: 5px;
+    margin: 5px;
+    padding-top: 20px;
+}
+
+.currency-form .currency-input{
+    width: 120px;
+    display: inline-block;
+    padding:5px;
+}
+
+.currency-form .currency-select{
+    width: 100x;
+    display: inline-block;
+    padding:5px;
+    margin-top: 15px;
+}
+
+.currency-form .currency-select.mat-mdc-select{
+    width: 100px;
+}
+
+.currency-form .convert-btn{
+    width: 40x;
+    display: inline-block;
+    padding:5px;
+    margin-top: 12px;
+}
