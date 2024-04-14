@@ -1,1 +1,21 @@
-<app-exchanger-group></app-exchanger-group>
+
+
+<div class="container"
+     fxLayout
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+>
+  <div class="item item-1">
+    <app-exchanger-group [unitTypes]="currencyTypes" [conversionType]="'money'"></app-exchanger-group>
+  </div>
+</div>
+
+<div class="container"
+     fxLayout
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+>
+  <div class="item item-2">
+    <app-exchanger-group [unitTypes]="distanceTypes" [conversionType]="'distance'"></app-exchanger-group>
+  </div>
+</div>

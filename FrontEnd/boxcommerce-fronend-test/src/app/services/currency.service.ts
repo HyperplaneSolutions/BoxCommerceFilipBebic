@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, catchError, map, retry, tap, throwError } from 'rxjs';
 import { environment } from '../../assets/environments/environment';
 import { ExchangeRate } from '../models/exchange-rate';
-import { Money } from '../models/money';
+import { FullAmount } from '../models/full-amount';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +19,8 @@ export class CurrencyService {
 
   constructor(private httpClient: HttpClient) { }
 
-  convertCurrency(moneyFrom: Money, moneyTo: Money): Observable<ExchangeRate> {
-    let endpoint = this.apiUrl + '?' + this.APIKEY_PARAM + this.apiKey + '&' + this.BASE_PARAM + moneyFrom.currencyCode + '&' + this.TO_PARAM + moneyFrom.currencyCode;
+  convertCurrency(moneyFrom: FullAmount, moneyTo: FullAmount): Observable<ExchangeRate> {
+    let endpoint = this.apiUrl + '?' + this.APIKEY_PARAM + this.apiKey + '&' + this.BASE_PARAM + moneyFrom.unit + '&' + this.TO_PARAM + moneyTo.unit;
     return this.httpClient
       .get<ExchangeRate>(endpoint)
       .pipe(retry(1), catchError(this.processError));

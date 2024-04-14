@@ -1,4 +1,4 @@
-export interface CurrencyType {
+export interface UnitType {
     value: string;
     viewValue: string;
 }

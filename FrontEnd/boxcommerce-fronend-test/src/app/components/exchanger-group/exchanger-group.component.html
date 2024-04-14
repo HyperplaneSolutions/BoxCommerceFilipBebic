@@ -1,2 +1,2 @@
-<app-currency-exchanger #leftConverter (newChangeEmitter)="triggerConversion($event)"></app-currency-exchanger>
-<app-currency-exchanger #rightConverter (newChangeEmitter)="triggerConversion($event)"></app-currency-exchanger>
+<app-unit-exchanger #leftExchanger [id]="1" [unitTypes]="unitTypes" (newChangeEmitter)="triggerConversion($event, 1)"></app-unit-exchanger>
+<app-unit-exchanger #rightExchanger [id]="2" [unitTypes]="unitTypes" (newChangeEmitter)="triggerConversion($event, 2)"></app-unit-exchanger>

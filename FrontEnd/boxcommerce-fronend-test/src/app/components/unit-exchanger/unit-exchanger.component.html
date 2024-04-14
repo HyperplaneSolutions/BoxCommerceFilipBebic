@@ -1,9 +1,9 @@
-<form class="currency-form">
+<form [formGroup]="exchangerForm" class="currency-form">
     <mat-form-field class="currency-input">
-      <input matInput placeholder="Amount" type="number">
+      <input formControlName="amount" matInput placeholder="Amount" type="number">
     </mat-form-field>
-    <mat-select class="currency-select" placeholder="Currency">
-        <mat-option *ngFor="let currency of currencyTypes" [value]="currency.value">
+    <mat-select formControlName="currency" class="currency-select" placeholder="Currency">
+        <mat-option *ngFor="let currency of unitTypes" [value]="currency.value">
         {{currency.viewValue}}
      </mat-option>
     </mat-select>

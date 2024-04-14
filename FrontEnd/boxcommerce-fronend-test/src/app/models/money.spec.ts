@@ -1,7 +1,7 @@
-import { Money } from './money';
+import { FullAmount } from './full-amount';
 
-describe('Money', () => {
+describe('FullAmount', () => {
   it('should create an instance', () => {
-    expect(new Money()).toBeTruthy();
+    expect(new FullAmount(0,'EUR')).toBeTruthy();
   });
 });
