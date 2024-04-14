@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Dockerfile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Dockerfile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BoxCommerce.Common\BoxCommerce.Common.csproj" />
+    <ProjectReference Include="..\BoxCommerce.Customer.Api.Contract\BoxCommerce.Customer.Api.Contract.csproj" />
+    <ProjectReference Include="..\BoxCommerce.Repo\BoxCommerce.Repo.csproj" />
+  </ItemGroup>
+
+</Project>
